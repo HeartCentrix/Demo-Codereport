@@ -21,4 +21,5 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         script: |
           cd /var/www/html
-          echo '<!DOCTYPE html><html><head><title>Live from GitHub</title></head><body style="text-align:center;font-family:sans-serif;"><h1>🚀 Deployed from GitHub Actions</h1><p>This file was updated on: $(date)</p></body></html>' | sudo tee index.html > /dev/null
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Live</title></head><body style='text-align:center;font-family:sans-serif;'><h1>🚀 Deployed from GitHub Actions</h1><p>This file was updated on: $(date)</p></body></html>" | sudo tee index.html > /dev/null
+
