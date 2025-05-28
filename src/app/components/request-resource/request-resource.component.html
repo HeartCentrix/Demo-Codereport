@@ -4,12 +4,12 @@
     <h2 class="title text-center mb-4">Resource Request</h2>
     <div class="mb-3">
       <label for="primarySkill" class="form-label">Position Title<span class="text-danger">*</span></label>
-      <input type="text" class="form-control" id="primarySkill" placeholder="Enter Job Title" [(ngModel)]="primarySkill"
-        [disabled]="isEditMode">
+      <input type="text" class="form-control" id="primarySkill" placeholder="Enter Position Title"
+        [(ngModel)]="primarySkill" [disabled]="isEditMode">
     </div>
     <div class="">
       <label for="jobDescription" class="form-label">Position Description<span class="text-danger">*</span></label>
-      <textarea class="form-control" id="jobDescription" rows="5" placeholder="Enter Job Description"
+      <textarea class="form-control" id="jobDescription" rows="5" placeholder="Enter Position Description"
         [(ngModel)]="jobDescription" [disabled]="isEditMode"></textarea>
     </div>
     <div class="text-center text-muted fw-bold">OR</div>
@@ -57,7 +57,7 @@
     <div class="mb-3">
       <label for="mcq" class="form-label">Quantity<span class="text-danger">*</span></label>
       <select class="form-select" id="mcq" [(ngModel)]="mcqCountPerSection" required>
-        <option value="" disabled selected>Select Quantity of Resources Requested</option>
+        <option value="null" disabled selected>Select Quantity of Resources Requested</option>
         <option *ngFor="let num of quantityOptions" [value]="num">{{ num }}</option>
       </select>
     </div>
