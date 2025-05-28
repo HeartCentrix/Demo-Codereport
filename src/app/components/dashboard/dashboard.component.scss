@@ -74,9 +74,15 @@
         }
     }
 
-    .table {
+    .fixed-height {
+        height: calc(100vh - 280px);
+        overflow: auto;
+    }
 
+    .table {
         th {
+            position: sticky;
+            top: 0px;
             background-color: #000000 !important;
             color: #ffffff !important;
         }
@@ -116,11 +122,6 @@
         }
     }
 
-    .fixed-height {
-        height: calc(100vh - 280px);
-        overflow: auto;
-    }
-
     .custom-dropdown {
         min-width: 8rem;
         border-radius: 4px;
@@ -130,7 +131,6 @@
         }
     }
 }
-
 
 @media (max-width: 767px) {
     .dashboard {

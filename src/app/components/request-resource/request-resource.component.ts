@@ -139,7 +139,7 @@ export class RequestResourceComponent implements OnInit {
           } else if (response.error) {
             this.toastr.error(response.error);
           } else {
-            if (this.mode === 'edit' && response.mgs === 'Job updated successfully.') {
+            if (this.mode === 'edit') {
               this.toastr.success(response.mgs);
               this.clearForm();
             } else {
