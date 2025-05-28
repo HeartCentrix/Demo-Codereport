@@ -1,0 +1,172 @@
+.hero {
+    position: relative;
+    background: #FFFFFF;
+}
+
+.gif-container img {
+    width: 610px;
+    height: auto;
+    max-height: 75vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    position: relative;
+    width: 327px;
+}
+
+.form-element {
+    margin: 1.6em 0;
+
+    &.form-submit {
+        margin: 1.6em 0 0;
+    }
+}
+
+.form-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    --bs-gutter-x: 0rem;
+}
+
+.login-background {
+    background: #FFFFFF;
+}
+
+.sign-in {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #E44C3D;
+}
+
+.label-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+input {
+    border-bottom: 1px solid #212121;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgb(16 24 40 / 5%);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 6px 0px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.float-right {
+    float: right;
+}
+
+.active-btn {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    color: #FFFFFF;
+    background: #E44C3D;
+    border: 1px solid #D0D5DD;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 30px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+        color: #FFFFFF;
+        background: #E44C3D;
+        opacity: 0.8;
+    }
+}
+
+.disabled-btn {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    opacity: 0.65;
+    color: #FFFFFF;
+    background: #E44C3D;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 30px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    pointer-events: none;
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.password {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.paragraph {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+footer {
+    background-color: #E44C3D;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    .content {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gif-container img {
+        width: 100%;
+    }
+}

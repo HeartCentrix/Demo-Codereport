@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="header fixed-top d-flex justify-content-between bg-white">
+        <div class="mr-auto "> <img src="/assets/images/codereport_newlogo.png" alt="codereport logo"
+                class="logo_img_m">
+        </div>
+        <div class="logout m-4" [class.disabled]="isMenuDisabled()"
+            [attr.data-bs-toggle]="isMenuDisabled() ? null : 'dropdown'"
+            [attr.aria-expanded]="isMenuDisabled() ? null : 'false'">
+            <div class="header-icon"></div>
+            <div class="header-icon1"></div>
+            <div class="header-icon"></div>
+        </div>
+        <ul class="dropdown-menu">
+            <ng-container *ngIf="currentRoute !== '/dashboard'">
+                <li><a class="dropdown-item" routerLink="/dashboard">Dashboard</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+            </ng-container>
+            <ng-container *ngIf="currentRoute !== '/request-resource'">
+                <li><a class="dropdown-item" routerLink="/request-resource">Request Resource</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+            </ng-container>
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</div>

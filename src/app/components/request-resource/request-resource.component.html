@@ -1,0 +1,90 @@
+<app-header></app-header>
+<div class="container mt-4">
+  <div class="card shadow-lg p-4">
+    <h2 class="title text-center mb-4">Resource Request</h2>
+    <div class="mb-3">
+      <label for="primarySkill" class="form-label">Position Title<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="primarySkill" placeholder="Enter Job Title" [(ngModel)]="primarySkill"
+        [disabled]="isEditMode">
+    </div>
+    <div class="">
+      <label for="jobDescription" class="form-label">Position Description<span class="text-danger">*</span></label>
+      <textarea class="form-control" id="jobDescription" rows="5" placeholder="Enter Job Description"
+        [(ngModel)]="jobDescription" [disabled]="isEditMode"></textarea>
+    </div>
+    <div class="text-center text-muted fw-bold">OR</div>
+    <div class="dropbox-area border-secondary rounded text-center p-4 mb-3" (dragover)="onDragOver($event)"
+      (drop)="onFileDrop($event)" (click)="fileInput.click()">
+      <i class="bi bi-upload display-6 mb-2"></i>
+      <p class="mb-0">Choose a file or drag it here to upload</p>
+      <div *ngIf="selectedFile" class="mt-2 text-primary fw-bold">
+        {{ selectedFile.name }}
+        <button class="btn remove-btn ms-2" (click)="clearSelectedFile($event)">
+          Remove
+        </button>
+      </div>
+      <input type="file" (change)="onFileSelect($event)" accept=".pdf,.doc,.docx,.txt" hidden #fileInput
+        [disabled]="isEditMode">
+    </div>
+    <div class="mb-3">
+      <label for="seniorityLevel" class="form-label">Seniority Level<span class="text-danger">*</span></label>
+      <select class="form-select" id="seniorityLevel" [(ngModel)]="seniorityLevel" [disabled]="isEditMode">
+        <option value="" disabled selected>Select Seniority Level</option>
+        <option value="Junior">Junior</option>
+        <option value="Mid">Mid</option>
+        <option value="Senior">Senior</option>
+        <option value="Expert">Expert</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="programmingLanguage" class="form-label">Preferred Coding Language<span
+          class="text-danger">*</span></label>
+      <select class="form-select" id="programmingLanguage" [(ngModel)]="programmingLanguage" [disabled]="isEditMode"
+        required>
+        <option value="" disabled selected>Select Coding Language</option>
+        <option *ngFor="let lang of programmingLanguages" [value]="lang.languageName">{{ lang.languageName }}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="location" placeholder="City,State,Country,Hybrid or Remote"
+        [(ngModel)]="location">
+    </div>
+    <div class="mb-3">
+      <label for="rate" class="form-label">Rate<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="rate" placeholder="Bill Rate" [(ngModel)]="rate">
+    </div>
+    <div class="mb-3">
+      <label for="mcq" class="form-label">Quantity<span class="text-danger">*</span></label>
+      <select class="form-select" id="mcq" [(ngModel)]="mcqCountPerSection" required>
+        <option value="" disabled selected>Select Quantity of Resources Requested</option>
+        <option *ngFor="let num of quantityOptions" [value]="num">{{ num }}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="additionalDetails" class="form-label">Additional Requirements or Details<span
+          class="text-danger">*</span></label>
+      <textarea class="form-control" id="additionalDetails" rows="3" placeholder="Anything else we should know?"
+        [(ngModel)]="additionalDetails" [disabled]="isEditMode"></textarea>
+    </div>
+    <div class="text-center">
+      <button class="btn custom-btn w-50" (click)="submitJob()" [disabled]="!isFormValid()">Submit</button>
+    </div>
+    <ngx-spinner [name]="spinner1" [fullScreen]="true" [zIndex]="99999"
+      template="<img src='assets/images/CR_loading_white.gif' class='cr_loader'/>">
+      <p style="font-size: 20px; color: white">Please wait while we generate your job description link. This might take
+        a few moments.</p>
+    </ngx-spinner>
+    <div *ngIf="showModal" class="modal" tabindex="-1" role="dialog" style="display: block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Link is Created!</h5>
+          </div>
+          <div class="modal-body">
+            <p>Your job description link has been successfully created.</p>
+            <button class="btn custom-btn" (click)="copyUrlToClipboard()">Copy URL</button>
+          </div>
+        </div>
+      </div>
+    </div>

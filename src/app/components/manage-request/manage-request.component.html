@@ -1,0 +1,99 @@
+<app-header></app-header>
+<div class="container">
+  <h4 class="title mb-4">Manage Request</h4>
+  <div class="table-responsive mb-4">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Evaluation</th>
+          <th>Seniority</th>
+          <th>Auth. Code</th>
+          <th>Programming</th>
+          <th>Location</th>
+          <th>Rate</th>
+          <th>Qty.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ job.jobTitle }}</td>
+          <td>{{ job.evaluation }}</td>
+          <td>{{ job.seniority }}</td>
+          <td>{{ job.authCode }}</td>
+          <td>{{ job.programming }}</td>
+          <td>{{ job.location }}</td>
+          <td>{{ job.rate }}</td>
+          <td>{{ job.qty }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Table 2: Description -->
+  <div class="table-responsive mb-4">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Job Description</th>
+          <th>Additional Requirements or Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            {{ description }}
+            <a href="#" (click)="$event.preventDefault()">
+              See More
+            </a>
+          </td>
+          <td class="align-top">
+            {{ moreDetails }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Table 3: Candidates -->
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Availability</th>
+          <th>Candidate Name</th>
+          <th>Primary Skill</th>
+          <th>Evaluation</th>
+          <th>Code Report Score</th>
+          <th>Work Auth.</th>
+          <th>Years Exp.</th>
+          <th>Take Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of candidates; let i = index">
+          <td [ngClass]="{
+                  'text-success': c.availability==='Exclusive',
+                  'text-warning': c.availability==='Pending',
+                  'text-danger':  c.availability==='On Contract'
+                }">
+            {{ c.availability }}
+          </td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.primarySkill }}</td>
+          <td>{{ c.evaluation }}</td>
+          <td>{{ c.score }}</td>
+          <td>{{ c.workAuth }}</td>
+          <td>{{ c.yearsExp }}</td>
+          <td class="take-action mb-0">
+            <ul class="action-list">
+              <li><a [href]="'assets/images/report' + (i + 1) + '.png'">View Report</a></li>
+              <li><a [href]="'assets/images/resume.png'">View Resume</a></li>
+              <li><a href="#" (click)="$event.preventDefault()">Request Resource</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

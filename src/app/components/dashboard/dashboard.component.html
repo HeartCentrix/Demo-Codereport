@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="dashboard">
+    <div class="banner">
+        <div class="container">
+            <div class="banner__wrapper">
+                <img src="assets/images/dashboard-banner.jpg" class="banner__img" alt="Reinventing the hiring process">
+                <div class="banner__overlay text-white">
+                    <h1 class="fw-bold">This is Gig Work Reimagined.</h1>
+                    <p class="lead fw-bold">Build amazing teams, on demand</p>
+                    <button class="btn req-job-btn" (click)="goToRequestResource()">+ Request Resource</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-9 col-md-10 px-0">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Hey Tom, let's get hiring!</h2>
+                    <h5 class="dashboard-subtitle mb-4">List of Resource Requests</h5>
+                </div>
+                <div class="table-responsive fixed-height">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Job Title</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let r of requests; let i = index">
+                                <td>{{ r.date | date:'MM/dd/yy' }}</td>
+                                <td>{{ r.jobTitle }}</td>
+                                <td>
+                                    <button class="btn mng-job-btn me-2" (click)="goToManageRequest()">Manage
+                                        Job</button>
+                                </td>
+                                <td>
+                                    <div class="dropdown d-inline">
+                                        <button class="btn btn-link p-0 text-dark" type="button"
+                                            data-bs-toggle="dropdown">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                        <ul class="custom-dropdown dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" [routerLink]="['/request-resource']"
+                                                    [queryParams]="{jobTitle: r.jobTitle}"
+                                                    [state]="{ mode: 'copy' }">Copy</a></li>
+                                            <li><a class="dropdown-item" [routerLink]="['/request-resource']"
+                                                    [queryParams]="{jobTitle: r.jobTitle}"
+                                                    [state]="{ mode: 'edit' }">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"
+                                                    (click)="$event.preventDefault()">Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,102 @@
+{
+    "home":{
+        "heading": "Please enter your information, then click “Submit” to start the evaluation",
+        "first_name_label": "First Name",
+        "first_name_required_msg" : "First Name is required",
+        "first_name_pattern_msg": "First Name is invalid, avoid to many spaces",
+        "email_required_msg": "Email Address is required",
+        "email_pattern_msg": "Email Address is invalid",
+        "current_company_label": "Current Company",
+        "current_company_required_msg": "Current Company is required",
+        "current_company_pattern_msg": "Current Company is invalid, avoid to many spaces",
+        "current_state_label": "Current State",
+        "current_state_select_label": "-Select State-",
+        "work_auth_status_label": "Work Authorization Status",
+        "work_auth_status_select_label": "-Select-",
+        "target_annual_salary_label": "Target Annual Salary",
+        "upload_resume_label": "Upload Your Resume",
+        "upload_resume_success_label": "Resume Uploaded Successfully",
+        "upload_btn_label": "Upload",
+        "last_name_label": "Last Name",
+        "last_name_required_msg": "Last Name is required",
+        "last_name_pattern_msg": "Last Name is invalid, avoid to many spaces",
+        "phone_number_label": "Phone Number",
+        "phone_number_required_label": "Phonenumber is required",
+        "phone_number_pattern_label": "Phonenumber is invalid, provide 10 digit mobile number",
+        "current_city_label": "Current City",
+        "current_country_label": "Current Country",
+        "skill_label": "Skill",
+        "skill_select_label" : "-Select-",
+        "skill_required_msg": "Skill is required",
+        "work_location_preference_label": "Work Location Preference",
+        "work_location_preference_select_label": "-Select-",
+        "upload_govt_id_label": "Upload Your Government ID",
+        "upload_govt_id_success_label": "Government ID Uploaded Successfully",
+        "upload_profile_pic_label": "Upload Your Profile Picture",
+        "upload_profile_pic_success_label": "Profile Picture Uploaded Successfully",
+        "submit_btn_label": "Submit",
+        "clear_btn_label": "Clear",
+        "full_name_label": "Full Name",
+        "full_name_required_msg" : "Full Name is required",
+        "full_name_pattern_msg": "Full Name is invalid, avoid to many spaces",
+        "description_required_msg": "Description is required",
+        "description_pattern_msg": "Description is invalid, avoid to many spaces"
+    },
+    "mcq":{
+        "thank_you_success_msg": "Thank you taking Assessment, We will evalute your inputs/answers and will get back to you soon with result."
+    },
+    "register":{
+        "form_label": "Sign Up",
+        "email":{
+            "label":"Email Address",
+            "required_msg": "Email address is required",
+            "pattern_msg" : "Email address is invalid"
+        },
+        "create_password": {
+            "label":"Create Password",
+            "required_msg": "Create password is required",
+            "pattern_msg" : "Please enter a password between 8 and 15 characters (Password must contain both uppercase and lowercase letters, along with a number and special character)"
+        },
+        "first_name":{
+            "label": "First Name",
+            "required_msg" : "First name is required",
+            "pattern_msg": "First name is invalid, avoid to many spaces"
+        },
+        "last_name": {
+            "label": "Last Name",
+            "required_msg" : "Last name is required",
+            "pattern_msg": "Last name is invalid, avoid to many spaces"
+        },
+        "phone":{
+            "label": "Phone Number",
+            "required_msg": "Phone number is required",
+            "pattern_msg": "Please enter a valid phone number"
+        },
+        "back_btn_label":"Back",
+        "next_btn_label":"Next"
+    },
+    "contact_us":{
+        "heading": "Contact Us",
+        "form_heading_label": "Get in Touch",
+        "full_name":{
+            "label": "Full Name",
+            "required_msg" : "Full name is required",
+            "pattern_msg": "Full name is invalid, avoid to many spaces"
+        },
+        "email":{
+            "label":"Email Address",
+            "required_msg": "Email address is required",
+            "pattern_msg" : "Email address is invalid"
+        },
+        "phone":{
+            "label": "Phone Number (optional)",
+            "required_msg": "Phone number is required",
+            "pattern_msg": "Please enter a valid phone number"
+        },
+        "text_box":{
+            "required_msg": "Description is required",
+            "pattern_msg": "Description is invalid, avoid to many spaces"
+        },
+        "description_pattern_msg": "If you have any questions about Code Report, please fill out the form on this page or contact us directly using the information below."
+    }
+}

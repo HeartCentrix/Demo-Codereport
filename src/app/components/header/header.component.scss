@@ -1,0 +1,50 @@
+.bg-white {
+    background-color: #f4f4f4 !important;
+}
+
+.logo_img_m {
+    width: auto;
+    height: 60px;
+    padding-left: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+
+.header-icon {
+    border-top: 2px solid #28293D;
+    width: 20px;
+    margin-bottom: 3px;
+}
+
+.header-icon1 {
+    border-top: 2px solid #28293D;
+    width: 14px;
+    margin-bottom: 3px;
+}
+
+.dropdown-item {
+    font-family: "Inter";
+    font-style: normal;
+
+    &:hover {
+        color: #E44C3D !important;
+        background-color: transparent !important;
+    }
+}
+
+.dropdown-menu {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    z-index: 1055 !important;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+}
