@@ -38,8 +38,10 @@ export class DashboardComponent implements OnInit {
         if (response.status === 200 && response.data) {
           this.requests = response.data.map((item: any) => {
             const jobTitle = item.pragramName;
-            const trimmedTitle = jobTitle.includes('_')
-              ? jobTitle.substring(0, jobTitle.lastIndexOf('_'))
+            const parts = jobTitle.split('_');
+            const lastPart = parts[parts.length - 1];
+            const trimmedTitle = /^\d+$/.test(lastPart)
+              ? parts.slice(0, -1).join('_')
               : jobTitle;
 
             return {

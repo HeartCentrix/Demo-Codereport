@@ -6,9 +6,16 @@
         color: #E44C3D;
     }
 
+    .table-responsive {
+        max-height: 55vh;
+        overflow: auto;
+    }
+
     .table {
 
         th {
+            position: sticky;
+            top: 0px;
             background-color: #000000 !important;
             color: #ffffff !important;
         }
@@ -22,11 +29,6 @@
             vertical-align: middle;
             padding: 1rem;
         }
-    }
-
-    .table-responsive {
-        max-height: 80vh;
-        overflow: auto;
     }
 
     .take-action {
