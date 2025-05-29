@@ -80,9 +80,13 @@
     }
 
     .table {
-        th {
+        thead {
             position: sticky;
             top: 0px;
+        }
+
+        th {
+
             background-color: #000000 !important;
             color: #ffffff !important;
         }
