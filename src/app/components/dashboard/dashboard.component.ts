@@ -43,7 +43,6 @@ export class DashboardComponent implements OnInit {
             const trimmedTitle = /^\d+$/.test(lastPart)
               ? parts.slice(0, -1).join('_')
               : jobTitle;
-
             return {
               date: item.createdAt,
               jobTitle: trimmedTitle,
